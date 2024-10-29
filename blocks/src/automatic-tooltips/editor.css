@@ -1,0 +1,34 @@
+.daext-automatic-tooltips-sidebar-content {
+    padding: 16px;
+}
+
+.daext-automatic-tooltips-sidebar-content label {
+    font-size: 12px;
+}
+
+.daext-automatic-tooltips-sidebar-content select {
+    height: 24px;
+    line-height: 16px;
+    box-shadow: none;
+    padding: 3px 5px;
+    margin: 0 !important;
+    width: 100%;
+    border-color: #dddddd;
+    border-radius: 0;
+    min-height: auto;
+    font-size: 12px !important;
+}
+
+.daext-automatic-tooltips-sidebar-content select:hover {
+    border-color: #5b9dd9;
+    color: #32373c;
+}
+
+.daext-automatic-tooltips-sidebar-content select:focus {
+    box-shadow: none !important;
+    color: #32373c;
+}
+
+.daext-daext-automatic-tooltips-sidebar-content .components-base-control__field {
+    margin: 0 !important;
+}

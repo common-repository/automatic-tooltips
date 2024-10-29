@@ -1,0 +1,43 @@
+.daextauttol-tooltip,
+.daextauttol-tooltip *,
+.daextauttol-tooltip::before,
+.daextauttol-tooltip *::before,
+.daextauttol-tooltip::after,
+.daextauttol-tooltip *::after {
+    box-sizing: border-box !important;
+}
+
+.daextauttol-tooltip {
+    position: relative !important;
+}
+
+.daextauttol-tooltip::before,
+.daextauttol-tooltip::after {
+    --scale: 0 !important;
+    position: absolute !important;
+    top: -0.25rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale)) !important;
+    transform-origin: bottom center !important;
+}
+
+.daextauttol-tooltip::before {
+    --translate-y: calc(-100% - var(--arrow-size)) !important;
+    content: attr(data-tooltip) !important;
+    text-align: center !important;
+    width: max-content !important;
+    background: var(--tooltip-color) !important;
+}
+
+.daextauttol-tooltip:hover::before,
+.daextauttol-tooltip:hover::after {
+    --scale: 1 !important;
+}
+
+.daextauttol-tooltip::after {
+    --translate-y: calc(-1 * (var(--arrow-size) + 1px)) !important;
+    content: '' !important;
+    border: var(--arrow-size) solid transparent !important;
+    border-top-color: var(--tooltip-color) !important;
+    transform-origin: top center !important;
+}
